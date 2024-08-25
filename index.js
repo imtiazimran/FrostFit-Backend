@@ -252,7 +252,7 @@ async function run() {
 
 
         // get all clothes
-        app.get('/api/v1/clothes', isAuth, async (req, res) => {
+        app.get('/api/v1/clothes', async (req, res) => {
             try {
 
                 const clothes = await clothesCollection.find().toArray();
